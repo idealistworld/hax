@@ -153,7 +153,7 @@ function nextDate() {
                 var timeSpanToIterate = result.timeFrame;
               
                 // Calculate future date considering month changes
-                var daysToAdd = (newIterationValue - 1) * timeSpanToIterate;
+                var daysToAdd = 1 + ((newIterationValue - 1) * timeSpanToIterate);
                 var futureDate = new Date(jsonToDate.getFullYear(), jsonToDate.getMonth(), jsonToDate.getDate() + daysToAdd);
               
                 document.getElementById("OouJcb").value = (futureDate.getMonth() + 1) + "/" + futureDate.getDate() + "/" + futureDate.getFullYear();
